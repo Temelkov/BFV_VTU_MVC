@@ -1,0 +1,51 @@
+﻿@model TESTAPP.Models.Doctor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Doctor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="doctor_id" />
+            <div class="form-group">
+                <label asp-for="doctorFirstName" class="control-label"></label>
+                <input asp-for="doctorFirstName" class="form-control" />
+                <span asp-validation-for="doctorFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="doctorMidName" class="control-label"></label>
+                <input asp-for="doctorMidName" class="form-control" />
+                <span asp-validation-for="doctorMidName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="doctorLastName" class="control-label"></label>
+                <input asp-for="doctorLastName" class="form-control" />
+                <span asp-validation-for="doctorLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="internship" class="control-label"></label>
+                <input asp-for="internship" class="form-control" />
+                <span asp-validation-for="internship" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="speciality" class="control-label"></label>
+                <input asp-for="speciality" class="form-control" />
+                <span asp-validation-for="speciality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
