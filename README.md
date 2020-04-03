@@ -1,4 +1,4 @@
-<div style="text-align: center"><img src="/TESTAPP/wwwroot/favicon.ico" height="120px">
+<center><div style="text-align: center"><img src="/TESTAPP/wwwroot/favicon.ico" height="120px"><center>
 <h2>Best Friend Vet (BFV)</h2>
 </div>
 
