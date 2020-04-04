@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BOB.DO.Response;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,9 +21,17 @@ namespace TESTAPP.Controllers
         }
 
         // GET: Doctors
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Doctor.ToListAsync());
+            var doctors = from d in _context.Doctor
+                         select d;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                doctors = doctors.Where(s => s.doctorFirstName.Contains(searchString));
+            }
+
+            return View(await doctors.ToListAsync());
         }
 
         // GET: Doctors/Details/5
