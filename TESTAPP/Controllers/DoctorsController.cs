@@ -23,6 +23,7 @@ namespace TESTAPP.Controllers
         // GET: Doctors
         public async Task<IActionResult> Index(string searchString)
         {
+            //TODO It's recommended to use "using" statement, also it would be more high-quality programming code if you use services for all business logic. Also you can use Repository pattern to decouple Db connection.
             var doctors = from d in _context.Doctor
                          select d;
 
@@ -41,7 +42,8 @@ namespace TESTAPP.Controllers
             {
                 return NotFound();
             }
-
+            //TODO Use SingleOrDefault. There is some differences between single and first. When searched data type of Id's (primary key/unique key column) it is more accurate to use SingleOrDefault- will generate query like "select * from users where userid = 1"             Select matching record, Throws exception if more than one records found. FirstOrDefault will generate query like "select top 1 * from users where userid = 1" Select first matching rows
+            //When retrieve data from Db, you must use some DTO object (view model), https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-5
             var doctor = await _context.Doctor
                 .FirstOrDefaultAsync(m => m.doctor_id == id);
             if (doctor == null)
@@ -61,6 +63,8 @@ namespace TESTAPP.Controllers
         // POST: Doctors/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
+            //TODO Here you can use View model "DoctorViewModel" for instance. 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("doctor_id,doctorFirstName,doctorMidName,doctorLastName,internship,speciality")] Doctor doctor)
