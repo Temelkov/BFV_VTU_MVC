@@ -53,6 +53,16 @@ namespace TESTAPP
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapAreaControllerRoute(
+                   name: "AdminRoute",
+                   areaName: "Admin",
+                   pattern: "{area:exists}/{controller=DoctorsController}/{action=Index}/{id?}");
+
+                endpoints.MapAreaControllerRoute(
+                   name: "UserRoute",
+                   areaName: "User",
+                   pattern: "{area:exists}/{controller=DoctorsController}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

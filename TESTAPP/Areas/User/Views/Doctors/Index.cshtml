@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TESTAPP.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Doctors in BFV</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+
+<form asp-controller="Doctors" asp-action="Index" method="get">
+    <p>
+        First name: <input type="text" name="SearchString">
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.doctorFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.doctorMidName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.doctorLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.internship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.speciality)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.doctorFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doctorMidName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doctorLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.internship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.speciality)
+            </td>
+            @*<td>
+                <a asp-action="Edit" asp-route-id="@item.doctor_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.doctor_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.doctor_id">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
