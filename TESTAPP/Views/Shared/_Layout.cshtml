@@ -4,37 +4,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BFV</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-sketchy.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" asp-area="default" asp-controller="Home" asp-action="Index">BFV</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="default" asp-controller="Home" asp-action="Index">Home</a>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-area="default" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="User" asp-controller="Doctors" asp-action="Index">Doctors</a>
+                            <a class="nav-link" asp-area="User" asp-controller="Doctors" asp-action="Index">Doctors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="default" asp-controller="Home" asp-action="Privacy">Operations</a>
+                            <a class="nav-link" asp-area="default" asp-controller="Home" asp-action="Privacy">Operations</a>
                         </li>
                         <li>
-                            <a class="nav-link text-dark" asp-area="default" asp-controller="Home" asp-action="Privacy">Drugs</a>
+                            <a class="nav-link" asp-area="default" asp-controller="Home" asp-action="Privacy">Drugs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="default" asp-controller="Contact" asp-action="Index">Contact</a>
+                            <a class="nav-link" asp-area="default" asp-controller="Contact" asp-action="Index">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="default" asp-controller="Privacy" asp-action="Index">Privacy</a>
+                            <a class="nav-link" asp-area="default" asp-controller="Privacy" asp-action="Index">Privacy</a>
                         </li>
                     </ul>
                 </div>

@@ -6,9 +6,17 @@
 
 <h1>Doctors in BFV (Admin Panel)</h1>
 
+<div class="alert alert-dismissible alert-danger">
+    @*<button type="button" class="close" data-dismiss="alert">&times;</button>*@
+    <h4 class="alert-heading">Warning!</h4>
+    <p class="mb-0">You are currently acting as an Administrator! Anything you change will affect all other users!</a>.</p>
+</div>
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<a href="" alt="">Exit from Control Panel</a>
 
 <form asp-controller="Doctors" asp-action="Index" method="get">
     <p>
@@ -16,6 +24,7 @@
         <input type="submit" value="Search" />
     </p>
 </form>
+
 
 <table class="table">
     <thead>
