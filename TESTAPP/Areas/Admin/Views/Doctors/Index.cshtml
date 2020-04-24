@@ -16,7 +16,7 @@
     <a asp-action="Create">Create New</a>
 </p>
 
-<a href="" alt="">Exit from Control Panel</a>
+<a class="link" asp-area="User" asp-controller="Doctors" asp-action="Index">Exit from Admin Panel</a>
 
 <form asp-controller="Doctors" asp-action="Index" method="get">
     <p>
@@ -48,7 +48,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.doctorFirstName)
@@ -71,6 +71,6 @@
                 <a asp-action="Delete" asp-route-id="@item.doctor_id">Delete</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
