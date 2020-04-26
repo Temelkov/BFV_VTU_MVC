@@ -10,7 +10,14 @@
     <a asp-action="Create">Create New</a>
 </p>*@
 
-<a class="link" asp-area="Identity" asp-controller="Account" asp-action="Login">Are you Admin? Login here</a>
+<partial name="_LoginPartial" />
+
+@*<a asp-area="Identity" asp-controller="Account" asp-action="Login">Are you Admin? Login here</a>*@
+<a href="/identity/account/login">Are you Admin? Login here</a>
+
+@*<li>
+    <a href="@Url.Action("Index", "Areas", "")" class="elements"><span>Clients</span></a>
+</li>*@
 
 <form asp-controller="Doctors" asp-action="Index" method="get">
     <p>
