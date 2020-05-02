@@ -1,5 +1,4 @@
 ﻿@model BFV_VTU.Models.WorkTime.WorkTimeViewModel
-@using BFV_VTU.Models;
 @{
     ViewData["Title"] = "Work Time";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,8 +6,63 @@
 
 <h1>Work Time</h1>
 
-@foreach (var str in ViewBag.WorkDayOfWeek)
-{
-    @Html.Raw(str);
-    <br />
-}
+<li class="list-group-item list-group-item-light">
+    <center>
+        @*@foreach (var day in ViewBag.WorkDayOfWeek)
+            {
+                @Html.Raw(day);
+                <br />
+            }*@
+        <h2>
+            @ViewBag.WorkDayOfWeek[0]
+        </h2>
+    </center>
+</li>
+
+<li class="list-group-item list-group-item-secondary">
+    <center>
+        <h2>
+            @ViewBag.WorkDayOfWeek[1]
+        </h2>
+    </center>
+</li>
+
+<li class="list-group-item list-group-item-success">
+    <center>
+        <h2>
+            @ViewBag.WorkDayOfWeek[2]
+        </h2>
+    </center>
+</li>
+
+<li class="list-group-item list-group-item-danger">
+    <center>
+        <h2>
+            @ViewBag.WorkDayOfWeek[3]
+        </h2>
+    </center>
+</li>
+
+<li class="list-group-item list-group-item-warning">
+    <center>
+        <h2>
+            @ViewBag.WorkDayOfWeek[4]
+        </h2>
+    </center>
+</li>
+
+<li class="list-group-item list-group-item-info">
+    <center>
+        <h2>
+            @ViewBag.WorkDayOfWeek[5]
+        </h2>
+    </center>
+</li>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center>
+<h2><strong>WE ARE WAITING FOR YOU WITH US !</strong></h2>
+</center>

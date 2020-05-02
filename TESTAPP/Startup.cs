@@ -55,6 +55,8 @@ namespace TESTAPP
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseStatusCodePages();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapAreaControllerRoute(
