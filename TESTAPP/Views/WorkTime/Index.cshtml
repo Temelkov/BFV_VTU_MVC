@@ -1,0 +1,14 @@
+﻿@model BFV_VTU.Models.WorkTime.WorkTimeViewModel
+@using BFV_VTU.Models;
+@{
+    ViewData["Title"] = "Work Time";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Work Time</h1>
+
+@foreach (var str in ViewBag.WorkDayOfWeek)
+{
+    @Html.Raw(str);
+    <br />
+}
