@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TESTAPP.Data;
@@ -9,6 +10,7 @@ using TESTAPP.Models;
 namespace TESTAPP.Areas.Admin.Doctors.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class DoctorsController : Controller
     {
         private readonly MvcDoctorContext _context;
